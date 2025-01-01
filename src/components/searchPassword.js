@@ -160,7 +160,7 @@ function SearchPassword() {
                 </div>
             )}
             <ToastContainer
-                position="top-right"
+                position="top-center"
                 autoClose={900}
                 hideProgressBar
                 newestOnTop={false}

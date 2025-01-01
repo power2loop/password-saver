@@ -7,14 +7,18 @@ const verifyToken = require('./middleware/auth');
 // const Routes = require('./routes/passwordRoutes');
 
 const app = express();
-const PORT = process.env.PORT || PORT;
+
+// const mongoURL = process.env.MONGODB_URL_LOCAL // local db connect
+const mongoURL = process.env.MONGODB_URL // global db connect
+const PORT = process.env.PORT || 3000;
+
 
 // Middleware
 app.use(express.json()); // to parse JSON data
 app.use(cors()); // to allow cross-origin requests
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(mongoURL)
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
 
