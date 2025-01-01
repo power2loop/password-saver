@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(120deg, #007bff, #d0314c);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+.register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #adadad;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.store-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  padding-right: 35px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.search-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  max-height: 80vh;
+  /* Set a maximum height to allow scrolling if content exceeds this height */
+}
+
+
+.store-password h2,
+.search-password h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 2px solid #adadad;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+form {
+  padding: 0 20px;
+}
+
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px 0;
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.txt_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
+  width: 100%;
+}
+
+
+button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #2691d9;
+  background-color: #2691d9;
+  color: white;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1c7ecb;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button[type="button"] {
+  margin-top: 20px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+}
+
+button[type="button"]:hover {
+  background-color: #aaa;
+  color: white;
+
+}
+
+/* Loading button state */
+button[type="submit"]:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+p {
+  margin-top: 20px;
+  color: #333;
+}
+
+.btn-home {
+  width: 90%;
+  height: 50px;
+  margin: 10px 50px 0 20px;
+}
+
+
+
+
+
+/* Style for password details section */
+.store-password .details,
+.search-password .details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.store-password .details p,
+.search-password .details p {
+  margin-bottom: 10px;
+}
+
+.search-password ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-password ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logout button styling */
+.logout-btn {
+  margin-top: 20px;
+  background-color: #f44336;
+}
+
+.logout-btn:hover {
+  background-color: #e53935;
+}
+
+/* Message box styling */
+p {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*responsive part*/
+
+@media only screen and (max-width: 768px) {
+
+  /* Make the containers smaller on smaller screens */
+  .dashboard,
+  .login,
+  .register,
+  .store-password,
+  .search-password {
+    width: 80vw;
+    max-width: 90%;
+  }
+
+  /* Adjust font size for headings */
+  .dashboard h2,
+  .login h2,
+  .register h2,
+  .store-password h2,
+  .search-password h2 {
+    font-size: 20px;
+  }
+
+  /* Adjust form inputs for better usability */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 14px;
+    height: 35px;
+  }
+
+  /* Adjust button size */
+  button {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  /* Adjust padding for elements */
+  .txt_field input {
+    font-size: 14px;
+  }
+
+  .txt_field label {
+    font-size: 14px;
+  }
+}
