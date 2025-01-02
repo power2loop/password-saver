@@ -5,7 +5,7 @@ import { IoHome } from "react-icons/io5";
 import { IoMdLogIn } from "react-icons/io";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { baseURL } from '../../url';
+import { baseURL } from '../url';
 
 function Login() {
     const [formData, setFormData] = useState({ username: "", password: "" });

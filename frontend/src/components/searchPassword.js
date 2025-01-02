@@ -7,7 +7,7 @@ import { MdLogout } from "react-icons/md";
 import { TbPassword } from "react-icons/tb";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { baseURL } from '../../url';
+import { baseURL } from '../url';
 
 function SearchPassword() {
     const [searchUrl, setSearchUrl] = useState("");

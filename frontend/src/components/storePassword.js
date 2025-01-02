@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { baseURL } from '../../url';
+import { baseURL } from '../url';
 
 function StorePassword() {
     const [formData, setFormData] = useState({
