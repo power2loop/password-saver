@@ -5,7 +5,7 @@ import { IoHome } from "react-icons/io5";
 import { IoMdLogIn } from "react-icons/io";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-
+import { baseURL } from '../../url';
 
 function Login() {
     const [formData, setFormData] = useState({ username: "", password: "" });
@@ -30,7 +30,7 @@ function Login() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/login', formData);
+            const response = await axios.post(`${baseURL}/login`, formData);
             if (response.data.success) {
                 // Store the JWT token in localStorage
                 localStorage.setItem('token', response.data.token);

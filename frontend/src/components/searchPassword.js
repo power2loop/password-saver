@@ -7,6 +7,7 @@ import { MdLogout } from "react-icons/md";
 import { TbPassword } from "react-icons/tb";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { baseURL } from '../../url';
 
 function SearchPassword() {
     const [searchUrl, setSearchUrl] = useState("");
@@ -41,7 +42,7 @@ function SearchPassword() {
             Authorization: `Bearer ${token}`,
         };
 
-        axios.get(`http://localhost:5000/search/${searchUrlEncoded}`, { headers })
+        axios.get(`${baseURL}/search/${searchUrlEncoded}`, { headers })
             .then((response) => {
 
                 if (response.data) {
@@ -80,7 +81,7 @@ function SearchPassword() {
             Authorization: `Bearer ${token}`, // Add the token in the request headers
         };
 
-        axios.delete(`http://localhost:5000/delete/${encodeURIComponent(normalizedUrl)}`, { headers })
+        axios.delete(`${baseURL}/${encodeURIComponent(normalizedUrl)}`, { headers })
             .then((response) => {
 
                 setPasswordData(null);
@@ -107,7 +108,7 @@ function SearchPassword() {
             Authorization: `Bearer ${token}`,
         };
 
-        axios.get('http://localhost:5000/all', { headers })
+        axios.get(`${baseURL}/all`, { headers })
             .then((response) => {
 
                 setAllPasswords(response.data.data); // Store all passwords in state
