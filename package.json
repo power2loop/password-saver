@@ -11,10 +11,11 @@
     "react-router-dom": "^7.1.0",
     "react-scripts": "^5.0.1",
     "react-toastify": "^11.0.2",
+    "serve": "^14.2.4",
     "webpack-dev-server": "^5.2.0"
   },
   "scripts": {
-    "start": "NODE_OPTIONS=--max-old-space-size=4096 serve -s build",
+    "start": "NODE_OPTIONS=--max-old-space-size=4096 npx serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
